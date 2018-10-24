@@ -4,6 +4,7 @@ import android.app.hotel.R;
 import android.app.hotel.adapter.RoomAdapter;
 import android.app.hotel.model.room.Room;
 import android.app.hotel.presenter.RoomPresenter;
+import android.app.hotel.view.post.PostFragment;
 import android.app.hotel.view.room.RoomFragment;
 import android.app.hotel.view.room.RoomView;
 import android.support.annotation.NonNull;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private FrameLayout mMainFrame;
     private MoreFragment moreFragment;
     private RoomFragment roomFragment;
+    private PostFragment postFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
                     case  R.id.nav_room:
                         setFragment(roomFragment);
+                        return true;
 
+                    case  R.id.nav_post:
+                        setFragment(postFragment);
+                        return true;
 
                         default:
                             return true;
@@ -60,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         moreFragment = new MoreFragment();
         roomFragment = new RoomFragment();
+        postFragment = new PostFragment();
 
     }
 
