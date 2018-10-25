@@ -1,11 +1,7 @@
 package android.app.hotel.view;
 
 import android.app.hotel.R;
-import android.app.hotel.adapter.RoomAdapter;
-import android.app.hotel.model.room.Room;
-import android.app.hotel.presenter.RoomPresenter;
 import android.app.hotel.view.room.RoomFragment;
-import android.app.hotel.view.room.RoomView;
 import android.support.annotation.NonNull;
 import android.support.design.bottomnavigation.LabelVisibilityMode;
 import android.support.design.widget.BottomNavigationView;
