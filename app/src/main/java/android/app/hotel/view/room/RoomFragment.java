@@ -37,7 +37,7 @@ public class RoomFragment extends Fragment implements RoomView {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_room, container, false);
-        lvRoom = (ListView) view.findViewById(R.id.lvRoom);
+        lvRoom = (ListView) view.findViewById(R.id.listviewRoom);
 
         RoomPresenter roomPresenter = new RoomPresenter(this);
         roomPresenter.getRooms();

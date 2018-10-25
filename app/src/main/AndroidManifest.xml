@@ -24,6 +24,8 @@
             android:name=".view.room.RoomDetail"
             android:screenOrientation="portrait">
         </activity>
+
+        <activity android:name=".view.post.PostItent"></activity>
     </application>
 
 </manifest>
