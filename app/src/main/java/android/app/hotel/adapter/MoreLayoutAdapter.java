@@ -44,9 +44,6 @@ public class MoreLayoutAdapter extends ArrayAdapter<MoreLayout>  {
             titleView.setText(moreLayouts.get(position).getTitle());
         } else {
             view = inflater.inflate(R.layout.group_header_item, parent, false);
-
-            TextView titleView = (TextView) view.findViewById(R.id.header);
-            titleView.setText(moreLayouts.get(position).getTitle());
         }
         return view;
     }

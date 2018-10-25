@@ -6,8 +6,7 @@ public class MoreLayout {
 
     private boolean isGroupHeader = false;
 
-    public MoreLayout(String title) {
-        this.title = title;
+    public MoreLayout() {
         isGroupHeader = true;
     }
 

@@ -41,10 +41,9 @@ public class MoreFragment extends Fragment {
     public ArrayList<MoreLayout> generateData(){
         ArrayList<MoreLayout> moreLayouts = new ArrayList<MoreLayout>();
 
-        moreLayouts.add(new MoreLayout("Thông tin ứng dụng"));
         moreLayouts.add(new MoreLayout(R.drawable.ic_home, "Giới thiệu"));
         moreLayouts.add(new MoreLayout(R.drawable.ic_action_news, "Liên hệ"));
-        moreLayouts.add(new MoreLayout("Người dùng"));
+        moreLayouts.add(new MoreLayout());
         moreLayouts.add(new MoreLayout(R.drawable.ic_assignment_ind, "Thông tin tài khoản"));
         moreLayouts.add(new MoreLayout(R.drawable.ic_action_help, "Hướng dẫn"));
 
