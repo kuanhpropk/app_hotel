@@ -2,7 +2,7 @@ package android.app.hotel.presenter;
 
 import android.app.hotel.model.room.RestResponse;
 import android.app.hotel.model.room.Room;
-import android.app.hotel.service.RoomService;
+import android.app.hotel.service.room.RoomService;
 import android.app.hotel.view.room.RoomView;
 
 import java.util.List;

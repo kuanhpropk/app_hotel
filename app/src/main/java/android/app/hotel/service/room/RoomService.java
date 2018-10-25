@@ -1,4 +1,6 @@
-package android.app.hotel.service;
+package android.app.hotel.service.room;
+
+import android.app.hotel.service.RoomAPI;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
