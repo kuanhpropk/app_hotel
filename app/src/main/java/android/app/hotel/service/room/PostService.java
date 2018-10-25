@@ -1,12 +1,14 @@
-package android.app.hotel.service;
+package android.app.hotel.service.room;
+
+import android.app.hotel.service.PostAPI;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RoomService {
+public class PostService {
     private Retrofit retrofit;
 
-    public RoomAPI getAPI(){
+    public PostAPI getAPI(){
         String BASE_URL = "https://apihotel.herokuapp.com/";
 
         if (retrofit == null) {
@@ -16,6 +18,6 @@ public class RoomService {
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
-        return retrofit.create(RoomAPI.class);
+        return retrofit.create(PostAPI.class);
     }
 }
