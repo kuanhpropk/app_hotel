@@ -24,10 +24,6 @@ public class RoomDetail extends AppCompatActivity {
 
         setValue();
 
-//        textView = (TextView) findViewById(R.id.abc);
-//        Intent intent = getIntent();
-//        String position = intent.getStringExtra("name");
-
     }
 
     public void mapped(){
