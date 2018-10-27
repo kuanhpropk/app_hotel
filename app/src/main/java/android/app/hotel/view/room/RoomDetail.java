@@ -4,13 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.hotel.R;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
 public class RoomDetail extends AppCompatActivity {
+    private Toolbar toolbar;
     private TextView txtName, txtPrice, txtAcreage, txtDescription;
     private ImageView imgRoom;
 
@@ -19,6 +22,14 @@ public class RoomDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_detail);
+
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar.setTitle("Chi tiết phòng");
+
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mapped();
 
@@ -45,5 +56,18 @@ public class RoomDetail extends AppCompatActivity {
 
         Picasso.get().load(intent.getStringExtra("image")).into(imgRoom);
         txtDescription.setText(intent.getStringExtra("description"));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == android.R.id.home)
+        {
+            this.finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
