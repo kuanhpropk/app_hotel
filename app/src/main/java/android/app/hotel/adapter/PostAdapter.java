@@ -1,7 +1,7 @@
 package android.app.hotel.adapter;
 
 import android.app.hotel.R;
-import android.app.hotel.model.room.Post;
+import android.app.hotel.model.post.Post;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

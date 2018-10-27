@@ -21,7 +21,7 @@ tools:context=".view.post.PostFragment">
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:text="Danh Sách Tin Tức"
+        android:text="DANH SÁCH TIN TỨC"
         android:textSize="20sp" />
 
     <ListView
