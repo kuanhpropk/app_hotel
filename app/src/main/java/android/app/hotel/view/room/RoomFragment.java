@@ -49,7 +49,6 @@ public class RoomFragment extends Fragment implements RoomView {
     public void roomRead(final List<Room> rooms) {
         roomAdapter = new RoomAdapter(this.getContext(), R.layout.view_room, rooms);
         lvRoom.setAdapter(roomAdapter);
-
         lvRoom.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

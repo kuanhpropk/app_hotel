@@ -44,7 +44,7 @@ public class PostFragment extends Fragment implements PostView{
     }
 
     @Override
-    public void postRead(List<Post> posts) {
+    public void postRead(final List<Post> posts) {
         postAdapter = new PostAdapter(this.getContext(), R.layout.view_post, posts);
         lvPost.setAdapter(postAdapter);
         lvPost.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -54,19 +54,13 @@ public class PostFragment extends Fragment implements PostView{
                     if(position == x){
 //                        Toast.makeText(view.getContext(),"gia tri da~ nhan la " + (x+1), Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getActivity(),PostItent.class);
-                        String Image = Objects.requireNonNull(postAdapter.getItem(position).getImage());
-                        String Title = Objects.requireNonNull(postAdapter.getItem(position).getTitle());
-                        String Admin = Objects.requireNonNull(postAdapter.getItem(position).getAdmin());
-                        String Ago = Objects.requireNonNull(postAdapter.getItem(position).getAgo());
-                        String Tag = Objects.requireNonNull(postAdapter.getItem(position).getTag());
-                        String DescriptionLong = Objects.requireNonNull(postAdapter.getItem(position).getLongDescription());
-
-                        intent.putExtra("Image", Image.toString());
-                        intent.putExtra("Title", Title.toString());
-                        intent.putExtra("Admin", Admin.toString());
-                        intent.putExtra("Ago", Ago.toString());
-                        intent.putExtra("Tag", Tag.toString());
-                        intent.putExtra("DescriptionLong", DescriptionLong.toString());
+//                        String Image = Objects.requireNonNull(postAdapter.getItem(position).getImage());
+                        intent.putExtra("Title", posts.get(position).getTitle());
+                        intent.putExtra("Image", posts.get(position).getImage());
+                        intent.putExtra("Admin", posts.get(position).getAdmin());
+                        intent.putExtra("Ago", posts.get(position).getAgo());
+                        intent.putExtra("Tag", posts.get(position).getTag());
+                        intent.putExtra("DescriptionLong", posts.get(position).getLongDescription());
                         startActivity(intent);
                     }
                 }
