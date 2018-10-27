@@ -4,6 +4,7 @@ import android.app.hotel.R;
 
 import android.app.hotel.view.post.PostFragment;
 import android.app.hotel.view.room.RoomFragment;
+import android.app.hotel.view.service.ServiceFragment;
 import android.support.annotation.NonNull;
 import android.support.design.bottomnavigation.LabelVisibilityMode;
 import android.support.design.widget.BottomNavigationView;
@@ -11,12 +12,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.ListView;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mMainNav;
@@ -24,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private MoreFragment moreFragment;
     private RoomFragment roomFragment;
     private PostFragment postFragment;
+    private ServiceFragment serviceFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
                         setFragment(postFragment);
                         return true;
 
+                    case  R.id.nav_service:
+                        setFragment(serviceFragment);
+                        return true;
+
                         default:
                             return true;
                 }
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         moreFragment = new MoreFragment();
         roomFragment = new RoomFragment();
         postFragment = new PostFragment();
+        serviceFragment = new ServiceFragment();
 
     }
 
