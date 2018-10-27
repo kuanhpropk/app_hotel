@@ -1,7 +1,7 @@
 package android.app.hotel.view.post;
 
 import android.app.hotel.adapter.PostAdapter;
-import android.app.hotel.model.room.Post;
+import android.app.hotel.model.post.Post;
 import android.app.hotel.presenter.PostPresenter;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.app.hotel.R;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +52,7 @@ public class PostFragment extends Fragment implements PostView{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 for (int x=0; x<lvPost.getAdapter().getCount() ; x++){
                     if(position == x){
-                        Toast.makeText(view.getContext(),"gia tri da~ nhan la " + (x+1), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(view.getContext(),"gia tri da~ nhan la " + (x+1), Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getActivity(),PostItent.class);
                         String Image = Objects.requireNonNull(postAdapter.getItem(position).getImage());
                         String Title = Objects.requireNonNull(postAdapter.getItem(position).getTitle());
