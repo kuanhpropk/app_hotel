@@ -25,7 +25,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".view.huongdan.Huongdan_intent"></activity>
+=======
+<<<<<<< HEAD
+=======
+        <activity
+            android:name=".view.room.RoomDetail"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.post.PostItent" />
+        <activity android:name=".view.introduce.IntroduceActivity" />
+        <activity android:name=".view.contact.ContactActivity"></activity>
+>>>>>>> 1b5683019d810dd0d558aca64c4e2d6143428246
+>>>>>>> 4ef880cdf039f73c5b537e1a848672cf4cd0810a
     </application>
 
 </manifest>
